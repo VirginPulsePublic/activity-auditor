@@ -1,0 +1,31 @@
+{
+ :dev {
+   :database {:classname "org.postgresql.Driver"
+        :subprotocol "postgresql"
+        :name "mydb"
+        :hostname "myhost"
+        :portname "5432"
+        :username "myuser"
+        :pass "mypass"}
+   :amazon {
+            :amazonAccessKey "mykey"
+            :amazonSecretKey "mysecret"
+            }
+   :audit "https://sqs.us-east-1.amazonaws.com/path/to/audit/queue"
+ }
+
+ :prod {
+   :database {:classname "org.postgresql.Driver"
+        :subprotocol "postgresql"
+        :name "myproddb"
+        :hostname "myprodhost"
+        :portname "5432"
+        :username "myproduser"
+        :pass "myprodpass"}
+   :amazon {
+            :amazonAccessKey "myprodkey"
+            :amazonSecretKey "myprodsecret"
+            }
+   :audit "https://sqs.us-east-1.amazonaws.com/path/to/prod/audit/queue"
+ }
+}
