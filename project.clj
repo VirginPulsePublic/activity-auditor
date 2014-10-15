@@ -1,6 +1,6 @@
 (defproject activity-auditor "0.1.0-SNAPSHOT"
   :description "Monitorings and stores raw SQS messages from an audit queue"
-  :url "http://github.com/thoersch/activity-auditor"
+  :url "https://github.com/VirginPulsePublic/activity-auditor"
   :license {:name "Eclipse Public License"
             :url "http://www.eclipse.org/legal/epl-v10.html"}
   :dependencies [[org.clojure/clojure "1.6.0"]

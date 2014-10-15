@@ -4,6 +4,12 @@ A Clojure library designed to monitor a [SQS] (http://aws.amazon.com/sqs/) queue
 
 ## Usage
 
+To run, simply pass the environment name as a parameter:
+
+```el
+$> lein run dev
+```
+
 *Setup* includes editing the config.edn file in the resources folder to set your database, amazon, and audit queue settings.  It also assumes you have a schema as followed:
 
 ```el
@@ -19,12 +25,6 @@ WITH (
 ALTER TABLE activity_audit
   OWNER TO your_user_here;
 
-```
-
-To run, simply pass the environment name as a parameter:
-
-```el
-$> lein run dev
 ```
 
 You can also configure log4j's properties in the log4j.properties file in the src/ folder.
