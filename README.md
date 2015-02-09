@@ -25,6 +25,11 @@ WITH (
 ALTER TABLE activity_audit
   OWNER TO your_user_here;
 
+CREATE INDEX id_idx
+  ON activity_audit
+  USING btree
+  (id COLLATE pg_catalog."default");
+
 ```
 
 You can also configure log4j's properties in the log4j.properties file in the src/ folder.
