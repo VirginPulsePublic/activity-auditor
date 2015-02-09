@@ -39,7 +39,7 @@
 (defn consume-messages [client q]
   (future
     (dorun
-      (map (sqs/deleting-consumer client handle-message)
+      (pmap (sqs/deleting-consumer client handle-message)
         (sqs/polling-receive client q :max-wait Long/MAX_VALUE)))))
 
 (defn- print-banner [env]
